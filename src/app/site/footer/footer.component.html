@@ -1,36 +1,55 @@
 <div class="footer">
     <div class="fo">
         <div class="footer-tech">
-            <img  src="assets/images/technovert_logo_blue.svg">
-            <p >Technovert is your digital partner. Our experience brings the right insight, technology and
-                teamwork
-                together to create outstanding digital experiences.<br> Every time.</p>
+            <img src="assets/images/technovert_logo_blue.svg">
+            <p>Technovert is your digital partner.<br> Our experience brings the right<br> insight,technology and
+                teamwork <br>together to create outstanding<br> digital experiences. Every time.</p>
         </div>
-        <div class="footer-content">
-            <div class="content" *ngFor="let content of footerContent">
-                <div class="title">
-                    <h3>{{content.title}}</h3>
-                    <p *ngFor="let c of content.child;let i=index">
-                        {{c}}
-                    </p>
+        <div class="screen-425">
+            <div class="set">
+                <div class="footer-content">
+                    <div class="content" *ngFor="let content of footerContent">
+                        <div class="title me-5" (click)="toggleContent(content)">
+                            <h3>{{content.title}}</h3>
+                            <i class="arrow color-white"
+                                [ngClass]="{'arrow-open': content.open, 'no-arrow': !content.title}"></i>
+                        </div>
+                        <ng-container *ngIf="content.open">
+                            <p *ngFor="let c of content.child">
+                                {{c}}
+                            </p>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="location mt-5">
+                    <div class="loc">
+                        <div class=" lo">
+                            <h3>Location</h3>
+                        </div>
+                        <div class="l">
+                            <p class="mb-3">6010 W Spring<br>Plano, TX <br>'943-9412</p>
+                            <p class="mb-3">6010 W Spring<br>Plano, TX <br>'943-9412</p>
+                            <p class="mb-3">6010 W Spring<br>Plano, TX <br>'943-9412</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connect-us">
+                <div>
+                    <h5 class="mt-3">Connect with Us</h5>
+                </div>
+                <div class="logo">
+                    <img src="assets/images/linkedin.svg">
+                    <img src="assets/images/twitter.svg">
+                    <img src="assets/images/facebook.svg">
+                    <img src="assets/images/instagram.svg">
+                    <img src="assets/images/rss_feed.svg">
+                    <img class="stamp" src="assets/images/stamps.svg">
                 </div>
             </div>
         </div>
     </div>
-    <div class="connect-us">
-        <div>
-            <h5 class="mt-3">Connect with Us</h5>
-        </div>
-        <div class="logo">
-            <img src="assets/images/linkedin.svg">
-            <img src="assets/images/twitter.svg">
-            <img src="assets/images/facebook.svg">
-            <img src="assets/images/instagram.svg">
-            <img src="assets/images/rss_feed.svg">
-            <img class="stamp"  src="assets/images/stamps.svg">
-        </div>        
-    </div>
-
     <div class="privacy-policy">
         <div class="privacy">
             <p>© 2023, Technovert Solutions Inc</p>
@@ -39,4 +58,5 @@
     </div>
     <p>.</p>
 </div>
-<p class="warning">Could not connect to the reCAPTCHA service. Please check your internet connection and reload to get a reCAPTCHA challenge.</p>
+<p class="warning">Could not connect to the reCAPTCHA service. Please check your internet connection and reload to get a
+    reCAPTCHA challenge.</p>

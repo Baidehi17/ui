@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Renderer2 } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -8,25 +8,51 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent {
 
+  sidebarVisible: boolean = false;
+  items: MenuItem[] | undefined;
+  screenWidth!: number;
   isHeaderScrolled = false;
   logoSrc = 'assets/images/technovert_logo_white (1).svg';
+
+  constructor() {
+    this.screenWidth = window.innerWidth;
+    this.checkScreenWidth();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.screenWidth = window.innerWidth;
+    this.checkScreenWidth();
+  }
+
+  checkScreenWidth() {
+    // if (this.screenWidth >= 768) {
+    //   this.sidebarVisible = false;
+    // }
+  }
+
+  openSidebar() {
+    if (this.screenWidth >= 768 ||this.screenWidth >= 425 ||this.screenWidth >= 375 || this.screenWidth >= 320) {
+      this.sidebarVisible = !this.sidebarVisible;
+    }
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isHeaderScrolled = window.pageYOffset > 0;
     this.logoSrc = this.isHeaderScrolled ? 'assets/images/technovert_logo_blue.svg':'assets/images/technovert_logo_white (1).svg';
   }
-  
-  items: MenuItem[] | undefined;
 
+ 
   ngOnInit() {
     this.items = [
+      
       {
         label: 'Service',
         items: [
           {
             label: 'New',
-            icon: 'pi pi-fw pi-plus',
+            icon: '',
             items: [
               {
                 label: 'Bookmark',
@@ -53,7 +79,7 @@ export class HeaderComponent {
       },
       {
         label: 'Solution',
-        icon: 'pi pi-fw pi-pencil',
+        icon: '',
         items: [
           {
             label: 'Left',
@@ -75,7 +101,7 @@ export class HeaderComponent {
       },
       {
         label: 'Labs',
-        icon: 'pi pi-fw pi-user',
+        icon: '',
         items: [
           {
             label: 'New',
@@ -109,7 +135,7 @@ export class HeaderComponent {
       },
       {
         label: 'Insights',
-        icon: 'pi pi-fw pi-calendar',
+        icon: '',
         items: [
           {
             label: 'Edit',
@@ -139,11 +165,8 @@ export class HeaderComponent {
       },
       {
         label: 'About',
-        icon: 'pi pi-fw pi-power-off'
-      }, {
-        label: 'Careers',
-        icon: 'pi pi-fw pi-power-off'
-      },
+        icon: ''
+      }
     ];
   }
 }

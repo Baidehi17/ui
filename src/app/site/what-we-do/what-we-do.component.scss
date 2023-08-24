@@ -2,6 +2,7 @@
     .do {
         margin: 0% 22% 5% 10%;
         text-align: center;
+        h1{    font-weight: 900;}
     }
     .row{
         margin: 0% 2% 0% 2%;
@@ -9,6 +10,7 @@
     }
     .cards{
         width: 30%;
+        margin-bottom: 4%;
         .details {
             .circle-images {
                 margin-bottom: 2rem;
@@ -33,7 +35,7 @@
 
 ::ng-deep{
     .p-card {
-        box-shadow: 0 4px 14px 5px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 4px 14px 5px rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
         height: 87%;
     }
 }
@@ -46,6 +48,10 @@
 
 @media screen and (max-width: 768px) {
     .what-we-do{
+        .do{
+            margin:9% 0%;
+            text-align: center;
+        }
        .cards{
         width: 33.33%;
        }
@@ -53,12 +59,18 @@
   }
   @media screen and (max-width: 425px) {
     .what-we-do{
+        .do{
+            h1{
+                font-weight: 700;
+            }
+        }
         .row{
             display: block; 
         }
        .cards{
        width: 100%;
        margin: 2%;
+       margin-bottom: 6%;
        }
     }
   }

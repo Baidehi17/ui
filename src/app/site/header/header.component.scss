@@ -1,7 +1,7 @@
 :host ::ng-deep .p-menubar {
     border: none;
     background-color: transparent;
-    color: #fff;
+    color: #ffffff;
 }
 
 :host ::ng-deep .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
@@ -13,6 +13,16 @@
 
     display: none;
 }
+::ng-deep .p-sidebar-left{
+    background-color: #fff;
+}
+.white-background {
+    background-color: white;
+}
+
+
+
+
 
 .card {
     border: none;
@@ -27,6 +37,15 @@
         display: flex;
         justify-content: space-evenly;
 
+        button {
+
+            background: transparent;
+            border: none;
+
+            .pi-bars {
+                color: transparent;
+            }
+        }
 
         .header-set {
             display: flex;
@@ -34,13 +53,79 @@
         }
     }
 }
+
 .header.scrolled {
     background-color: #ffff;
     height: 5.5rem;
     width: 100%;
+
+   
 }
 
-.header.scrolled ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+
+.header.scrolled ::ng-deep .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
     color: black;
     font-size: 1.4rem;
+}
+
+@media screen and (max-width:768px) {
+    .card {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin: 5%;
+
+            button {
+                .pi-bars {
+                    color: rgb(32, 29, 29);
+                }
+            }
+        }
+    }
+    .header.scrolled {
+       
+        button {
+            .pi-bars {
+                color: rgb(84, 108, 218);
+            }
+        }
+    }
+
+    :host ::ng-deep .p-menubar .p-menubar-button {
+        color: transparent
+    }
+    
+}
+
+@media screen and (max-width:425px) {
+    .card {
+        .header {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0%;
+
+            button {
+                .pi-bars {
+                    color: rgb(255, 250, 250);
+                }
+            }
+        }
+    }
+
+    .header.scrolled {
+        background-color: #ffff;
+        height: 3.5rem;
+        width: 100%;
+
+        .header-set {
+            img {
+                height: 1.8rem;
+            }
+        }
+        button {
+            .pi-bars {
+                color: rgb(84, 108, 218);
+            }
+        }
+    }
 }

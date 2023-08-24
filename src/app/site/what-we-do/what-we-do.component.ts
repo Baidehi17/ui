@@ -12,7 +12,7 @@ export class WhatWeDoComponent {
     {
       icon: "assets/images/images.png",
       title: "Cloud Transformation",
-      para: "Cloud adoption results in better insights, collaboration and speed. &nbsp; We help you with all cloud migration scenarios and building cloud-based applications."
+      para: "Cloud adoption results in better speed.We help you with all cloud migration scenarios and building cloud-based applications."
     },
     {
       icon: "assets/images/artifical.jpeg",
@@ -32,12 +32,12 @@ export class WhatWeDoComponent {
     {
       icon: "assets/images/ED.jpeg",
       title: "Experience Design",
-      para: "The experiences you deliver is a game changer. Transform your end-to-end user experiences to be valued as a key player."
+      para: "The experiences you deliver is a game changer. Transform your end-to-end user experiences to be valued player."
     },
     {
       icon: "assets/images/DT.jpeg",
       title: "Digital Transformation",
-      para: "Digital technology is a growth catalyst. Identify potential areas for growth, prepare and execute the change to seize new opportunities."
+      para: "Digital technology is a growth catalyst. Identify potential areas for growth, prepare a new opportunities."
     },
     
   ];

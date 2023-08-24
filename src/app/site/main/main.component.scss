@@ -7,6 +7,9 @@
 
 
 .header {
+    background-size: cover;
+    min-height: 600px;
+
     .centered {
         position: absolute;
         top: 76%;
@@ -20,24 +23,61 @@
         color: #fff;
     }
 }
-.digital-experiences{
+
+.digital-experiences {
     margin: 6% 20% 12% 30%;
     text-align: center;
 
 }
-.what-we-do{
+
+.what-we-do {
     margin: 1% 2% 0% 9%;
 }
-.customers-love-us{
-    margin-top: 10%;
-    
+
+.customers-love-us {
+    margin-top: 10% ;
+
 }
-.footer{
+
+.footer {
     margin-top: 6rem;
 }
+.article{
+    margin: 26% 0%;
+}
 @media screen and (max-width: 768px) {
-    .what-we-do{
-        margin: 0% 0% 0% 0%;
+    .header {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .centered {
+            letter-spacing: normal;
+            top: 58%;
+
+        }
     }
-  }
-  
+    .digital-experiences{
+        margin: 10% 0%;
+    }
+
+    .what-we-do {
+        margin: 9% 0%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .header {
+        min-height: 75vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .centered {
+            font-size: 26px;
+            margin-bottom: 20px !important;
+            letter-spacing: normal;
+            top: 42%;
+        }
+    }
+}

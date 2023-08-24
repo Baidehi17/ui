@@ -1,5 +1,10 @@
 .customers-love-us {
+    
     .customers-details {
+        margin: 20% 0%;
+        h1{
+            font-weight: 800;
+        }
         text-align: center;
 
         h3 {
@@ -46,22 +51,49 @@
     .customers-love-us .customers .img img {
         height: 21rem;
         width: 14rem;
+        
     }
 }
 
+@media screen and (max-width: 768px) {
+ .customers-love-us{
+    .customers{
+        .img img{
+            height: 21rem;
+            width: 20rem;
+        }
+        .no-of-customers{
+        .happy-customer{
+            margin: 1.2rem 0rem 0rem 0rem;
+        }
+        .details{margin: 0rem;}
+    }
+    }
+ }   
+}
 @media screen and (max-width: 425px) {
-    .customers-love-us .customers {
+    .customers-love-us 
+    .customers {
         display: block;
 
         .img img {
-            height: 27rem;
-            width: 17rem;
+            height: 15rem;
+            margin-top: 2rem;
+            width: 17rem
         }
 
         .no-of-customers {
             .details {
                 margin: 0rem;
-                margin: 3rem 1rem 0rem 3rem;
+                margin-left: 0.5rem;
+                
+            }
+            h1{
+                margin-left: 0.5rem;
+            }
+            .happy-customer{
+                margin: 1.2rem 0rem 0rem 0rem;
+                font-size: 17px;
             }
         }
     }

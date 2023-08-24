@@ -12,6 +12,9 @@ import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
 import { CardModule } from 'primeng/card';
 import { CustomerLoveUsComponent } from './customer-love-us/customer-love-us.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+
 @NgModule({
   declarations: [
     MainComponent,
@@ -28,7 +31,10 @@ import { ArticlesComponent } from './articles/articles.component';
     PanelModule,
     MenubarModule,
     MegaMenuModule,
-    CardModule
+    CardModule,
+    SidebarModule,
+    ButtonModule
+    
   ],
   exports: [
     MainComponent

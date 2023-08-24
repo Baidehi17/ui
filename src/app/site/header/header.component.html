@@ -1,11 +1,24 @@
 <div class="card  position-fixed" [ngClass]="{'header': true, 'scrolled': isHeaderScrolled}">
-    <div class="header mt-4">
+    <div class="header">
         <div class="header-set">
-            <img src={{logoSrc}} class="mr-2" />
+            <img src={{logoSrc}} />
         </div>
         <div>
+            <button *ngIf="screenWidth <= 768" (click)="openSidebar()"><i class="pi pi-bars"
+                    style="font-size: 1.3rem"></i></button>
+            <p-sidebar *ngIf="screenWidth <= 768 && sidebarVisible" [(visible)]="sidebarVisible" [baseZIndex]="10000">
+                <div>
+                    <ul>
+                        <ng-container *ngFor="let menuItem of items">
+                            <li [ngClass]="{'p-separator': menuItem.separator}">
+                                <span class="p-menuitem-text">{{ menuItem.label }}</span>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </p-sidebar>
             <p-menubar [model]="items">
             </p-menubar>
         </div>
-    </div> 
+    </div>
 </div>
