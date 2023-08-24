@@ -9,17 +9,17 @@ import { FooterContent } from 'src/app/Model/FooterContent';
 export class FooterComponent {
   footerContent: FooterContent[] = [{
     title: 'Services',
-    open:false,
+    open:true,
     child: ['Cloud', 'Analytics', 'Data ', 'Product ', 'Digital ', ' Quality ', 'UX design']
   },
   {
     title: 'Insights',
-    open:false,
+    open:true,
     child: ['Blog', 'Papers', 'studies', 'Brochures', 'Webinar']
   },
   {
     title: 'About',
-    open:false,
+    open:true,
     child: ['About Us', 'Values', 'Quality', 'Careers', 'Contact Us']
   },
   // {

@@ -6,7 +6,7 @@
         <div>
             <button *ngIf="screenWidth <= 768" (click)="openSidebar()"><i class="pi pi-bars"
                     style="font-size: 1.3rem"></i></button>
-            <p-sidebar *ngIf="screenWidth <= 768 && sidebarVisible" [(visible)]="sidebarVisible" [baseZIndex]="10000">
+            <p-sidebar *ngIf="screenWidth <= 768 && sidebarVisible" [(visible)]="sidebarVisible"[modal]="false" [baseZIndex]="10000">
                 <div>
                     <ul>
                         <ng-container *ngFor="let menuItem of items">
@@ -17,7 +17,7 @@
                     </ul>
                 </div>
             </p-sidebar>
-            <p-menubar [model]="items">
+            <p-menubar [autoDisplay]="true" [model]="items">
             </p-menubar>
         </div>
     </div>

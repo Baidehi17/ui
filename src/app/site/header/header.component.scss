@@ -77,17 +77,21 @@
 
             button {
                 .pi-bars {
-                    color: rgb(32, 29, 29);
+                    color: rgb(255, 255, 255);
                 }
             }
         }
     }
     .header.scrolled {
-       
+       .header{
+        .header-set{
+            margin-top: -3rem;
+        }
         button {
             .pi-bars {
                 color: rgb(84, 108, 218);
             }
+       }
         }
     }
 
@@ -116,10 +120,12 @@
         background-color: #ffff;
         height: 3.5rem;
         width: 100%;
-
-        .header-set {
-            img {
-                height: 1.8rem;
+        .header{
+            .header-set{
+                margin-top: 1rem;
+                img {
+                    height: 1.8rem;
+                }
             }
         }
         button {
