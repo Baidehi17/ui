@@ -1,0 +1,133 @@
+.footer {
+    background-color: #303642;
+
+    .fo {
+        display: flex;
+    }
+
+    .footer-tech {
+        padding: 0rem;
+        color: #a8aab4;
+        margin: 3rem;
+
+        p {
+            line-height: 1.9rem;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+
+        .content {
+            margin: 3rem 3rem 0rem 3rem;
+
+        }
+
+        .title {
+            h3 {
+                color: #fff;
+                font-size: 25px;
+                letter-spacing: 1.2px;
+            }
+
+            p {
+                margin-bottom: 0rem;
+                color: #a8aab4;
+            }
+        }
+    }
+
+    .connect-us {
+        margin: 0rem 7rem 3rem 7rem;
+
+        h5 {
+            color: #fff;
+        }
+
+        img {
+            margin-right: 0.7rem;
+            height: 2.7rem;
+        }
+
+        .logo {
+            .ms-5 {
+                margin: 2rem;
+            }
+        }
+    }
+
+    .privacy-policy {
+        margin: 3rem 0rem 2rem 0rem;
+        background-color: #303642;
+
+        .privacy {
+            color: #a8aab4;
+            margin-right: 46rem;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        p {
+            margin: 0rem;
+        }
+    }
+}
+
+.warning {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 450;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        .row {
+            .footer-tech {
+                img {
+                    margin: 1rem 0rem 1rem 0rem;
+                }
+            }
+
+            .stamp {
+                margin: 2rem;
+                height: 4.7rem;
+            }
+
+            .footer-content {
+                .content {
+                    margin: 3rem 1rem 0rem 0rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .footer {
+        .fo {
+            display: block;
+
+            .footer-tech {
+                margin: 0rem;
+            }
+        }
+
+        .connect-us {
+            margin: 0rem 0rem 0rem 0rem;
+
+            .logo {
+                .stamp {
+                    margin: 1rem 0rem 0rem 0rem;
+                    height: 3rem;
+
+                }
+            }
+        }
+    }
+}

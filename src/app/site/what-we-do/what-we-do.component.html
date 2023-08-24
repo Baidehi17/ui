@@ -1,0 +1,24 @@
+<div class="what-we-do mt-5">
+    <div>
+        <div class="do">
+            <h1>What we do</h1>
+        </div>
+        <div class="row">
+            <div class="cards col-3" *ngFor="let do of whatWeDo">
+                <div class="details">
+                    <p-card >
+                        <div class="circle-images">
+                            <div class="circle-image">
+                                <img src={{do.icon}} alt="Your Image">
+                            </div>
+                        </div>
+                        <h2>{{do.title}}</h2>
+                        <p class="m-0">
+                            {{do.para}}
+                        </p>
+                    </p-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

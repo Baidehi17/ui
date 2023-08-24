@@ -1,0 +1,46 @@
+:host ::ng-deep .p-menubar {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-content .p-menuitem-link .p-submenu-icon {
+
+    display: none;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+
+    .p-menubar .p-menuitem-link {
+        color: #fff;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-evenly;
+
+
+        .header-set {
+            display: flex;
+            align-items: stretch;
+        }
+    }
+}
+.header.scrolled {
+    background-color: #ffff;
+    height: 5.5rem;
+    width: 100%;
+}
+
+.header.scrolled ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+    color: black;
+    font-size: 1.4rem;
+}

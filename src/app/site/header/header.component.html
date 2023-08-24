@@ -1,0 +1,11 @@
+<div class="card  position-fixed" [ngClass]="{'header': true, 'scrolled': isHeaderScrolled}">
+    <div class="header mt-4">
+        <div class="header-set">
+            <img src={{logoSrc}} class="mr-2" />
+        </div>
+        <div>
+            <p-menubar [model]="items">
+            </p-menubar>
+        </div>
+    </div> 
+</div>

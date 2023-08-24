@@ -1,0 +1,42 @@
+<div class="footer">
+    <div class="fo">
+        <div class="footer-tech">
+            <img  src="assets/images/technovert_logo_blue.svg">
+            <p >Technovert is your digital partner. Our experience brings the right insight, technology and
+                teamwork
+                together to create outstanding digital experiences.<br> Every time.</p>
+        </div>
+        <div class="footer-content">
+            <div class="content" *ngFor="let content of footerContent">
+                <div class="title">
+                    <h3>{{content.title}}</h3>
+                    <p *ngFor="let c of content.child;let i=index">
+                        {{c}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="connect-us">
+        <div>
+            <h5 class="mt-3">Connect with Us</h5>
+        </div>
+        <div class="logo">
+            <img src="assets/images/linkedin.svg">
+            <img src="assets/images/twitter.svg">
+            <img src="assets/images/facebook.svg">
+            <img src="assets/images/instagram.svg">
+            <img src="assets/images/rss_feed.svg">
+            <img class="stamp"  src="assets/images/stamps.svg">
+        </div>        
+    </div>
+
+    <div class="privacy-policy">
+        <div class="privacy">
+            <p>© 2023, Technovert Solutions Inc</p>
+            <p>Privacy Policy</p>
+        </div>
+    </div>
+    <p>.</p>
+</div>
+<p class="warning">Could not connect to the reCAPTCHA service. Please check your internet connection and reload to get a reCAPTCHA challenge.</p>

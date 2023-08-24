@@ -1,0 +1,68 @@
+.customers-love-us {
+    .customers-details {
+        text-align: center;
+
+        h3 {
+            color: #666d7d;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    .customers {
+        display: flex;
+        margin: 5%;
+
+        .no-of-customers {
+            display: flex;
+            flex-wrap: wrap;
+
+            h1 {
+                font-size: clamp(50px, 7vw, 120px);
+                line-height: 1.13;
+                font-weight: 900;
+                color: #1077da
+            }
+
+            .happy-customer {
+                margin: 4.2rem 0rem 0rem 1rem;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            .details {
+                font-family: "Nunito Sans", sans-serif;
+                margin-right: 10rem;
+                font-size: 20px;
+                letter-spacing: 1.3px;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .customers-love-us .customers .img img {
+        height: 21rem;
+        width: 14rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .customers-love-us .customers {
+        display: block;
+
+        .img img {
+            height: 27rem;
+            width: 17rem;
+        }
+
+        .no-of-customers {
+            .details {
+                margin: 0rem;
+                margin: 3rem 1rem 0rem 3rem;
+            }
+        }
+    }
+}

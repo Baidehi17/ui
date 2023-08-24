@@ -1,0 +1,56 @@
+.articles{
+  background-color: #f8f8f8;
+  .row{
+      margin: 0rem 8rem 0rem 6rem;
+     
+      .col-md-3{
+          padding: 4rem;
+          width: 33%;
+          background-color: #fff;  
+          p{
+              font-size: 19px;
+              color: #666d7d
+          }            
+      }
+      .case-study{
+          color: #fff;
+          h2{
+              font-weight: 500;
+          }
+          p{
+              color: #fff;
+          }
+      }
+      .whitepaper{
+          color: #fff;
+          h2{
+              font-weight: 500;
+          }
+          p{
+              color: #fff;
+          }
+      }
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+    .articles{
+       
+        .row{
+            margin: 0rem 0rem 0rem 0rem;
+        }
+    }      
+}
+@media screen and (max-width: 508px) {
+    .articles{
+       
+        .row{ 
+            display: block;
+            .col-md-3{
+                width: fit-content;
+            }
+        }
+       
+    }      
+}
